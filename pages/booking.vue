@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout name="default">
-    <div>
+    <div class="page-content">
       <section class="relative py-32 bg-dark">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/20 to-dark"></div>
 
@@ -115,7 +115,8 @@
           </div>
         </div>
       </section>
-    </div> </NuxtLayout>
+    </div>
+  </NuxtLayout>
 </template>
 
 <script setup>

@@ -1,12 +1,12 @@
 <template>
-  <section class="section bg-dark-light">
+  <div class="section bg-dark-light">
     <div class="text-center mb-16" data-animation="fade-in">
       <h2 class="heading">Наші Послуги</h2>
       <p class="subheading mx-auto">Ми пропонуємо повний спектр професійних аудіо послуг для втілення вашого творчого бачення в життя.</p>
     </div>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div v-for="(service, index) in services" :key="index" 
+      <div v-for="(service, index) in services" :key="index"
            class="card p-8 flex flex-col items-center text-center hover:border-primary/50 border border-transparent"
            :data-animation="'slide-' + (index % 2 === 0 ? 'left' : 'right')">
         <div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary/20 mb-6">
@@ -14,16 +14,16 @@
         </div>
         <h3 class="text-white text-xl font-semibold mb-4">{{ service.title }}</h3>
         <p class="text-gray mb-6">{{ service.description }}</p>
-<!--        <NuxtLink :to="service.link" class="text-primary hover:text-primary-light font-medium transition-colors duration-300 mt-auto">-->
-<!--          Дізнатися Більше <i class="pi pi-arrow-right ml-1"></i>-->
-<!--        </NuxtLink>-->
+        <NuxtLink :to="service.link" class="text-primary hover:text-primary-light font-medium transition-colors duration-300 mt-auto">
+          Дізнатися Більше <i class="pi pi-arrow-right ml-1"></i>
+        </NuxtLink>
       </div>
     </div>
-    
-<!--    <div class="mt-16 text-center" data-animation="fade-in">-->
-<!--      <NuxtLink to="/services" class="btn-primary">Переглянути Всі Послуги</NuxtLink>-->
-<!--    </div>-->
-  </section>
+
+    <div class="mt-16 text-center" data-animation="fade-in">
+      <NuxtLink to="/services" class="btn-primary">Переглянути Всі Послуги</NuxtLink>
+    </div>
+  </div>
 </template>
 
 <script setup>

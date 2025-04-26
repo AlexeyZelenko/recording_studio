@@ -1,20 +1,20 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import type { NuxtConfig } from 'nuxt/schema'
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   ssr: false,
   
   css: [
     '~/assets/css/main.css',
-    'primevue/resources/themes/lara-dark-purple/theme.css',
     'primeicons/primeicons.css'
   ],
   
   modules: [
     '@nuxtjs/tailwindcss',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    '@primevue/nuxt-module'
   ],
-  
   build: {
     transpile: ['primevue']
   },
@@ -36,7 +36,9 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap' }
       ]
     },
-    pageTransition: { name: 'page', mode: 'out-in' }
+    page: {
+      transition: false
+    }
   },
   
   runtimeConfig: {
