@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #7c3aed;
+  --primary-light: #8b5cf6;
+  --secondary: #10b981;
+  --accent: #f43f5e;
+  --dark: #121212;
+  --dark-light: #1e1e1e;
+  --light: #f8fafc;
+  --gray: #94a3b8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-dark text-light;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-light text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-secondary text-secondary font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-secondary hover:text-white transform hover:scale-105;
+  }
+  
+  .section {
+    @apply py-20 px-4 md:px-8 max-w-7xl mx-auto;
+  }
+  
+  .heading {
+    @apply text-4xl md:text-5xl font-bold mb-8 text-white;
+  }
+  
+  .subheading {
+    @apply text-xl font-medium text-gray mb-12 max-w-2xl;
+  }
+  
+  .card {
+    @apply bg-dark-light rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+  
+  .glass-card {
+    @apply bg-dark-light/80 backdrop-blur-md border border-white/10 rounded-xl;
+  }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
