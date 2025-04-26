@@ -3,9 +3,7 @@
     <TheNavbar />
 
     <main class="flex-grow pt-20">
-      <div>
-        <slot />
-      </div>
+      <slot />
     </main>
 
     <TheFooter />

@@ -1,4 +1,5 @@
 import type { NuxtConfig } from 'nuxt/schema'
+import Lara from '@primeuix/themes/lara';
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
@@ -7,7 +8,7 @@ export default defineNuxtConfig({
   
   css: [
     '~/assets/css/main.css',
-    'primeicons/primeicons.css'
+    'primeicons/primeicons.css',
   ],
   
   modules: [
@@ -15,6 +16,14 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@primevue/nuxt-module'
   ],
+  primevue: {
+    options: {
+      theme: {
+        preset: Lara,
+        name: 'lara-dark-purple',
+      }
+    }
+  },
   build: {
     transpile: ['primevue']
   },

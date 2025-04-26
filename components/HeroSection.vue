@@ -13,10 +13,10 @@
           Професійні послуги запису, зведення та мастерингу в 
           сучасній студії. Піднесіть вашу музику разом з нами.
         </p>
-<!--        <div class="flex flex-col sm:flex-row gap-4">-->
-<!--          <NuxtLink to="/booking" class="btn-primary">Забронювати Сесію</NuxtLink>-->
-<!--          <NuxtLink to="/portfolio" class="btn-secondary">Послухати Наші Роботи</NuxtLink>-->
-<!--        </div>-->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <NuxtLink to="/booking" class="btn-primary">Забронювати Сесію</NuxtLink>
+          <NuxtLink to="/portfolio" class="btn-secondary">Послухати Наші Роботи</NuxtLink>
+        </div>
       </div>
     </div>
     
@@ -48,7 +48,7 @@ const durations = ref([])
 onMounted(() => {
   for (let i = 0; i < 12; i++) {
     heights.value.push(Math.floor(Math.random() * 70) + 30)
-    durations.value.push((Math.random() * 1) + 0.5)
+    durations.value.push((Math.random() * 0.5) + 0.2)
   }
 })
 </script>
